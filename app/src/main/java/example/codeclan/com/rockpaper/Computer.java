@@ -8,15 +8,16 @@ import java.util.Random;
 
 public class Computer {
 
-    protected ArrayList<String> choices;
+    protected ArrayList<String> RPSnames;
 
     public Computer() {
-        choices = new ArrayList<String >();
+        RPSnames = new ArrayList<String >();
         getMove();
     }
 
-    public Computer(ArrayList<String> choices){
-        this.choices = choices;
+    public Computer(ArrayList<String> RPSnames) {
+        this.RPSnames = RPSnames;
+    }
 
     public String getMove() {
         Random rand = new Random();
@@ -28,11 +29,15 @@ public class Computer {
     }
 
     public int getLength() {
-        return choices.size();
+        return RPSnames.size();
     }
 
     public String getChoiceAtIndex(int index) {
-        return choices.get(index);
+        return RPSnames.get(index);
+    }
+
+    public boolean checkChoice(RPSnames ROCK, RPSnames SCISSORS) {
+        return true;
     }
 }
 
